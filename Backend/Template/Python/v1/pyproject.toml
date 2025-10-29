@@ -1,31 +1,37 @@
 [project]
 name = "v1"
 version = "0.1.0"
-description = "A sample Python project"
+description = "Python Project Template v1"
 authors = [
-    { name = "Your Name", email = "your_email@example.com" }
+    { name = "YuanJun", email = "yuanjun@example.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
 
-
-[project.optional-dependencies]
-dev = ["ruff>=0.6.1"]
-
+[dependency-groups]
+dev = [
+    "ruff>=0.14.2",
+]
+docs = [
+    "myst-parser>=4.0.1",
+    "sphinx>=8.2.3",
+    "sphinx-autobuild>=2025.8.25",
+    "sphinx-autodoc-typehints>=3.5.2",
+    "sphinx-rtd-theme>=3.0.2",
+]
 
 [project.urls]
-Homepage = "https://example.com/your_project"
-
+Homepage = "https://example.com/v1"
+Documentation = "https://v1.readthedocs.io"
+Repository = "https://github.com/yourname/v1"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
-
 
 [tool.ruff]
 # 排除常见忽略目录
@@ -43,13 +49,13 @@ exclude = [
     "venv",
     ".ipynb_checkpoints",
     ".direnv",
+    "docs",
 ]
 # 代码风格设置（与Black保持一致）
 line-length = 88
 indent-width = 4
 target-version = "py313"  # 默认Python 3.13
 show-fixes = true
-
 
 [tool.ruff.lint]
 # 代码提示:默认启用的规则集
@@ -63,13 +69,11 @@ unfixable = []
 # 允许下划线前缀的未使用变量
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
-
 [tool.ruff.lint.isort]
 # 代码提示排序: 导入排序风格（与isort兼容）
 lines-after-imports = 2
 known-first-party = []
 known-third-party = []
-
 
 [tool.ruff.format]
 # 代码格式化:风格（与Black兼容）
@@ -79,3 +83,6 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 docstring-code-format = false  # 默认不格式化文档字符串中的代码示例
 docstring-code-line-length = "dynamic" # 根据文档字符串的内容动态调整行长度
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"

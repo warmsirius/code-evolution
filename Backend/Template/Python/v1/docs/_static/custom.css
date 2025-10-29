@@ -1,0 +1,35 @@
+/* Custom CSS for Sphinx documentation */
+
+/* Improve code block styling */
+.highlight {
+    border-radius: 4px;
+    border: 1px solid #e1e4e5;
+}
+
+/* Better table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.docutils th, table.docutils td {
+    border: 1px solid #e1e4e5;
+    padding: 8px 12px;
+}
+
+/* Improve admonition styling */
+div.admonition {
+    border-radius: 4px;
+}
+
+/* Custom header colors */
+.wy-side-nav-search {
+    background-color: #2980b9;
+}
+
+/* Better mobile responsiveness */
+@media (max-width: 768px) {
+    .wy-nav-content-wrap {
+        margin-left: 0;
+    }
+}
