@@ -172,3 +172,9 @@ cython_debug/
 
 # Mac
 .DS_Store
+
+# Ruff Cache
+.ruff_cache/
+
+# Mypy Cache
+.mypy_cache/
