@@ -38,19 +38,20 @@ packages = ["src"]
 # 排除常见忽略目录
 exclude = [
     ".git", 
-    ".venv", 
+    ".venv",
+    "venv", 
     "__pypackages__", 
     "__pycache__",
     ".pyenv",
-    ".pytest_cache",
-    ".pytype",
-    ".ruff_cache",
-    ".vscode",
-    "tests",
-    "venv",
     ".ipynb_checkpoints",
+    ".pytype",
+    ".vscode",
     ".direnv",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".mypy_cache",
     "docs",
+    "tests",
 ]
 # 代码风格设置（与Black保持一致）
 line-length = 100
