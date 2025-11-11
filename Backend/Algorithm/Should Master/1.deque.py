@@ -18,7 +18,7 @@ _T = TypeVar('_T') # TypeVar 允许你定义一个变量，该变量可以代表
 @dataclass
 class Node(Generic[_T]): # Generic里面参数是可以处理的类型参数
     val: _T
-    last: Node[_T] | None = None
+    last: Node[_T] | None = None # 注意📢: 直接使用'Node[_T]'和|语法,会将'Node[_T]'视为str,需要导入__future__.annotations
     next: Node[_T] | None = None
 
 
