@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from opt_sync import determine_actions
+from opt_sync_1 import determine_actions
 
 
 def test_when_a_file_exists_in_the_source_but_not_the_destination():
