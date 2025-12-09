@@ -22,3 +22,4 @@ def OR(x1, x2):
         return 0
     else:
         return 1
+        
